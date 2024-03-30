@@ -1,0 +1,24 @@
+{
+  "name": "file-manager",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/file-manager/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "file-manager:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "file-manager:build:development"
+        },
+        "production": {
+          "buildTarget": "file-manager:build:production"
+        }
+      }
+    }
+  }
+}
